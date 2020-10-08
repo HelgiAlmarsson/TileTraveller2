@@ -55,13 +55,14 @@ def leaver_puller_one(tempo):
 
 x = 1
 y = 1
-temp1 = 0
-temp2 = 0 
-temp3 = 0 
-temp4 = 0
 coin = 0
 
 while True:
+    slong = 0
+    temp1 = 0
+    temp2 = 0 
+    temp3 = 0 
+    temp4 = 0
     print('You can travel: ', end='')
     n = north(x, y)
     e = east(x, y)
@@ -95,53 +96,67 @@ while True:
         elif direction == 'w' and w == True:
              x -= 1
         else: 
+            slong += 1
             print('Not a valid direction!')
 
     else:
+        slong += 1
         print('Not a valid direction!')
 
     if x == 1 and y == 2:
-        if temp1 == 0:
+        while temp1 == 0:
+            if slong == 1:
+                break
             asdfaq = leaver_puller_one(temp1) 
-            if asdfaq == "y" or "Y":
+            if asdfaq == "y" or asdfaq == "Y":
                 temp1 += 1
                 coin += 1
-                print(f"You recieved 1 coin, your total is now {coin}")
+                print(f"You received 1 coin, your total is now {coin}.")
             else:
-                temp += 1
+                temp1 += 1
+                break
 
 
     if x == 2 and y == 2:
-        if temp2 == 0:
-            asdfaq = leaver_puller_one(temp2) 
-            if asdfaq == "y" or "Y":
+        while temp2 == 0:
+            if slong == 1:
+                break
+            asdfaq = leaver_puller_one(temp1) 
+            if asdfaq == "y" or asdfaq == "Y":
                 temp2 += 1
                 coin += 1
-                print(f"You recieved 1 coin, your total is now {coin}")
+                print(f"You received 1 coin, your total is now {coin}.")
             else:
                 temp2 += 1
+                break
 
 
     if x == 2 and y == 3:
-        if temp3 == 0:
-            asdfaq = leaver_puller_one(temp3) 
-            if asdfaq == "y" or "Y":
+        while temp3 == 0:
+            if slong == 1:
+                break
+            asdfaq = leaver_puller_one(temp1) 
+            if asdfaq == "y" or asdfaq == "Y":
                 temp3 += 1
                 coin += 1
-                print(f"You recieved 1 coin, your total is now {coin}")
+                print(f"You received 1 coin, your total is now {coin}.")
             else:
                 temp3 += 1
+                break
 
 
     if x == 3 and y == 2:
-        if temp4 == 0:
-            asdfaq = leaver_puller_one(temp4) 
-            if asdfaq == "y" or "Y":
+        while temp4 == 0:
+            if slong == 1:
+                break
+            asdfaq = leaver_puller_one(temp1) 
+            if asdfaq == "y" or asdfaq == "Y":
                 temp4 += 1
                 coin += 1
-                print(f"You recieved 1 coin, your total is now {coin}")
+                print(f"You received 1 coin, your total is now {coin}.")
             else:
                 temp4 += 1
+                break
 
 
                 
