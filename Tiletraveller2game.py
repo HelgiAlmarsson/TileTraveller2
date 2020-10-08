@@ -44,8 +44,22 @@ def west(x, y):
     else:
         return False 
 
+def leaver_puller_one(tempo):
+    if tempo == 0:
+        pull_leaver = input("Pull a lever (y/n): ")
+        if pull_leaver == "y" or "Y":
+            return pull_leaver
+        else:
+            return pull_leaver
+
+
 x = 1
 y = 1
+temp1 = 0
+temp2 = 0 
+temp3 = 0 
+temp4 = 0
+coin = 0
 
 while True:
     print('You can travel: ', end='')
@@ -65,7 +79,8 @@ while True:
     if s == True and w == True and n == False and e == False:
         print('(S)outh or (W)est', end='')
     if n == True and s == True and w == False and e == False:
-        print('(N)orth or (S)outh', end='')        
+        print('(N)orth or (S)outh', end='')   
+     
     print('.', end='')
     print()
     direction = input('Direction: ')
@@ -85,6 +100,51 @@ while True:
     else:
         print('Not a valid direction!')
 
+    if x == 1 and y == 2:
+        if temp1 == 0:
+            asdfaq = leaver_puller_one(temp1) 
+            if asdfaq == "y" or "Y":
+                temp1 += 1
+                coin += 1
+                print(f"You recieved 1 coin, your total is now {coin}")
+            else:
+                temp += 1
+
+
+    if x == 2 and y == 2:
+        if temp2 == 0:
+            asdfaq = leaver_puller_one(temp2) 
+            if asdfaq == "y" or "Y":
+                temp2 += 1
+                coin += 1
+                print(f"You recieved 1 coin, your total is now {coin}")
+            else:
+                temp2 += 1
+
+
+    if x == 2 and y == 3:
+        if temp3 == 0:
+            asdfaq = leaver_puller_one(temp3) 
+            if asdfaq == "y" or "Y":
+                temp3 += 1
+                coin += 1
+                print(f"You recieved 1 coin, your total is now {coin}")
+            else:
+                temp3 += 1
+
+
+    if x == 3 and y == 2:
+        if temp4 == 0:
+            asdfaq = leaver_puller_one(temp4) 
+            if asdfaq == "y" or "Y":
+                temp4 += 1
+                coin += 1
+                print(f"You recieved 1 coin, your total is now {coin}")
+            else:
+                temp4 += 1
+
+
+                
     if x == 3 and y == 1:
-        print('Victory!')
+        print(f"Victory! Total coins {coin}.")
         break
