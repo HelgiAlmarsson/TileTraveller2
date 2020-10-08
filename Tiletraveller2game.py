@@ -162,4 +162,10 @@ while True:
                 
     if x == 3 and y == 1:
         print(f"Victory! Total coins {coin}.")
-        break
+        again = input("Play again (y/n): ")
+        if again == "y":
+            x = 1
+            y = 1
+            coin = 0
+        else:
+            break
